@@ -1,9 +1,5 @@
 List overview for things that need to be done:
 
-
-//git hub??
-
-
 1. split routes, models, and forms into seperate files
 2. pull some kind of request
 3. make the db
