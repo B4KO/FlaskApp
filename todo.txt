@@ -12,4 +12,6 @@ List overview for things that need to be done:
 7. scrap information from the web
 8. create some kind of API
 9. make a gui
-10. hoste the web app
+10. host the web app
+11. add bootstrap or tailwind
+12. import books from a external api (probably need to run a external program to populate the db)
