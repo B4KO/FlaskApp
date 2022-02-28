@@ -7,15 +7,14 @@ from datetime import datetime
 from os import environ
 
 app = Flask(__name__)
-
 app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('DATABASE_URL') or 'sqlite:///myDB.db'
 app.config['SECRET_KEY'] = "Sorry i'm not your mom, Putin"
 
 
 db = SQLAlchemy(app)
 
-class Books(db.Model):
-    __tablename__ = "books"
+class Book(db.Model):
+    __tablename__ = "book"
     
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String, nullable=False)
