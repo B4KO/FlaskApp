@@ -1,11 +1,8 @@
 List overview for things that need to be done:
 
-1. split routes, models, and forms into seperate files
-4. create static folder
 5. create HTML, CSS, SASS, and JS files
 6. have some templates for HTML
 8. create some kind of API
-9. make a gui    IN PROGRESS
 10. host the web app
 11. add bootstrap or tailwind
 12. import books from a external api (probably need to run a external program to populate the db) IN PROGRESS
