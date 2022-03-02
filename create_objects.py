@@ -1,8 +1,13 @@
 import requests
 import random
-from app import db
-from models import User, Author, Book, Review
-from functions import gen_datetime
+from datetime import datetime, timedelta
+
+def gen_datetime(min_year=1900, max_year=datetime.now().year):
+    
+    start = datetime(min_year, 1, 1, 00, 00, 00)
+    years = max_year - min_year + 1
+    end = start + timedelta(days=365 * years)
+    return start + (end - start) * random.random()
 
 r = requests.get('https://jsonplaceholder.typicode.com/users')
 
@@ -21,14 +26,6 @@ for user in users:
     print("\n")
     
     print("BIRTHDATE: "+str(gen_datetime()))
-    print("\n") 
-    
-    userDb = User(name = str(user['name']), email = str(user['email']), birthdate = str(gen_datetime), date_added= str(datetime.utcnow))
-    db.session.add(userDb)
-    
-    try:
-        db.session.commit()
-    except Exception:
-        db.session.rollback()
+    print("\n")
     
     
