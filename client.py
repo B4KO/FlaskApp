@@ -1,7 +1,5 @@
 import tkinter as tk
 
-from sqlalchemy import column
-
 bg = "#808080" #gray
 
 root = tk.Tk()
